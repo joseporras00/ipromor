@@ -39,7 +39,9 @@ def update_output(n_clicks, email, passw):
     df=pd.sql_read_query(sql, con=con)
     if email not in df:
         return html.Div(children='Email incorrecto',style={'padding-left':'550px','padding-top':'40px','font-size':'16px'})
-    if li[uname]==passw:
+    is_true = df.loc[:, 'email'] == email
+    df2 = df.loc[is_true]
+    if df2['password']==passw:
         return html.Div(dcc.Link('Sesión iniciada con éxito', href='/dash1.py',style={'color':'#183d22','font-family': 'serif', 'font-weight': 'bold', "text-decoration": "none",'font-size':'20px'}),style={'padding-left':'605px','padding-top':'40px'})
 else:
     return html.Div(children='Contraseña incorrecta',style={'padding-left':'550px','padding-top':'40px','font-size':'16px'})

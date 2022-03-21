@@ -61,7 +61,7 @@ app.layout = html.Div(
 def display_page_content(pathname):
     path = app.strip_relative_path(pathname)
     if not path:
-        return pages.home.layout()
+        return pages.inicio.layout()
     elif path == "seasons":
         return pages.seasons.layout()
     elif path == "drivers":

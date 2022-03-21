@@ -8,13 +8,18 @@ import plotly.graph_objs as go
 import os
 import pandas as pd
 from dash.dependencies import Input, Output, State
+import dash_auth
+from users import USERNAME_PASSWORD_PAIRS
 
 from app import app
 
 import pages
 
-
 server = app.server
+#auth = dash_auth.BasicAuth(
+#    app,
+#    USERNAME_PASSWORD_PAIRS
+#)
 
 app.layout = html.Div(
     [

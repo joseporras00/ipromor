@@ -1,0 +1,1 @@
+C:\Users\JVALVERDE\AppData\Local\Programs\Python\Python310\python.exe "C:\Users\JVALVERDE\PycharmProjects\csvImport\main.py" pause
